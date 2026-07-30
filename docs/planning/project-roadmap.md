@@ -5,36 +5,12 @@
 
 ## 1. High-Level Architecture
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                         FRONTEND (Vercel)                       │
-│   React + TypeScript + Tailwind + shadcn/ui + Recharts           │
-│   Dashboard | Prediction | Batch Upload | Analytics | Insights   │
-└───────────────────────────┬───────────────────────────────────────┘
-                            │ REST (JSON) over HTTPS
-┌───────────────────────────▼───────────────────────────────────────┐
-│                        BACKEND (Render/Railway)                  │
-│   FastAPI (Python) — Auth, Validation, Business Logic             │
-│   ┌───────────────┐   ┌────────────────┐   ┌────────────────┐    │
-│   │ Prediction API │   │ Batch API      │   │ Recommendation │    │
-│   └───────┬────────┘   └───────┬────────┘   │ Engine (rules) │    │
-│           │                    │            └────────────────┘    │
-│   ┌───────▼────────────────────▼────────┐                        │
-│   │ ML Inference Layer (joblib/pickle)   │                        │
-│   │  Model + Preprocessing Pipeline      │                        │
-│   │  + SHAP Explainer (cached)           │                        │
-│   └───────────────────────────────────────┘                        │
-└───────────────────────────┬───────────────────────────────────────┘
-                            │
-┌───────────────────────────▼───────────────────────────────────────┐
-│                     DATABASE (PostgreSQL)                        │
-│   Employees | Predictions | Users | Departments | Reports         │
-└─────────────────────────────────────────────────────────────────┘
+![High-Level Architecture](../../assets/High-level-architechture.png)
 
 Offline / Training side (not user-facing, runs in notebooks/scripts):
 Raw Data → Cleaning → EDA → Feature Engineering → Training →
 Hyperparameter Tuning → Evaluation → SHAP → Serialized Model Artifact
-```
+
 
 **Why this shape, not a single Flask app with everything inline?**
 Separating the *training pipeline* (offline, run occasionally) from the *inference layer* (online, runs on every request) mirrors how real ML systems work. You train once, version the artifact, and the API just loads and serves it — this is the core idea behind "training/serving skew" avoidance and is a talking point interviewers actually probe for.
