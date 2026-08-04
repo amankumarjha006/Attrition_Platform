@@ -1,0 +1,26 @@
+{
+    "model_name": "LogisticRegression",
+    "strategy": "class_weight=None",
+    "optimal_threshold": 0.38765723934601554,
+    "hyperparameters": {
+        "C": 3,
+        "class_weight": null,
+        "dual": false,
+        "fit_intercept": true,
+        "intercept_scaling": 1,
+        "l1_ratio": 0.0,
+        "max_iter": 2000,
+        "n_jobs": null,
+        "penalty": "l2",
+        "random_state": 42,
+        "solver": "liblinear",
+        "tol": 0.0001,
+        "verbose": 0,
+        "warm_start": false
+    },
+    "test_metrics": {
+        "roc_auc": 0.8079076578516667,
+        "f1_score": 0.49411764705882355,
+        "optimal_threshold_used": 0.38765723934601554
+    }
+}
