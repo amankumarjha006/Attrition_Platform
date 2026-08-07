@@ -1,4 +1,4 @@
-from ml.src.recommendation import get_recommendations
+from attrition_ml.recommendation import get_recommendations
 
 # Mock explanation output similar to explain_employee
 mock_explanation = {

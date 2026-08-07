@@ -1,4 +1,4 @@
-from ml.src.explain import explain_employee
+from attrition_ml.explain import explain_employee
 
 sample = {
     "Age": 41,

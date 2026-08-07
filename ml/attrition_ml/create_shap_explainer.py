@@ -7,7 +7,7 @@ import joblib
 import shap
 from pathlib import Path
 
-from ml.src.config import (
+from attrition_ml.config import (
     MODEL_PATH,
     PREPROCESSOR_PATH,
     SHAP_EXPLAINER_PATH,

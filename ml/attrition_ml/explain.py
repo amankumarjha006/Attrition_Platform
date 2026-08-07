@@ -3,9 +3,9 @@ Explainability module: provides local SHAP explanations for a single employee.
 """
 
 import pandas as pd
-from ml.src.model_loader import get_explainer, get_preprocessor, get_feature_names
-from ml.src.preprocessing import prepare_employee_df
-from ml.src.schemas import ExplanationResult
+from attrition_ml.model_loader import get_explainer, get_preprocessor, get_feature_names
+from attrition_ml.preprocessing import prepare_employee_df
+from attrition_ml.schemas import ExplanationResult
 
 
 def explain_employee(raw_employee_dict: dict, top_n: int = 6) -> ExplanationResult:

@@ -1,4 +1,4 @@
-from ml.src.inference import predict_employee
+from attrition_ml.inference import predict_employee
 
 sample = {
     "Age": 41,

@@ -3,7 +3,7 @@ Recommendation module: translates SHAP explanations into actionable HR recommend
 """
 
 from typing import List
-from ml.src.schemas import RecommendationResult
+from attrition_ml.schemas import RecommendationResult
 
 # Mapping from feature keywords to recommendation strings
 RECOMMENDATION_RULES = {

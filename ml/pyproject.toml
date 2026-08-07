@@ -19,4 +19,4 @@ dependencies = [
 ]
 
 [tool.setuptools]
-packages = ["ml.src"]
+packages = ["attrition_ml"]

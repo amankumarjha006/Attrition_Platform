@@ -1,4 +1,4 @@
-from ml.src.model_loader import (
+from attrition_ml.model_loader import (
     get_model,
     get_preprocessor,
     get_feature_names,

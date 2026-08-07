@@ -4,9 +4,9 @@ Inference Module
 Provides prediction utilities for employee attrition.
 """
 
-from ml.src.model_loader import get_model, get_preprocessor, get_metadata
-from ml.src.preprocessing import prepare_employee_df
-from ml.src.schemas import PredictionResult
+from attrition_ml.model_loader import get_model, get_preprocessor, get_metadata
+from attrition_ml.preprocessing import prepare_employee_df
+from attrition_ml.schemas import PredictionResult
 
 
 # ------------------------------------------------------------------
