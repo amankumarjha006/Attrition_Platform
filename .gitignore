@@ -53,8 +53,7 @@ Thumbs.db
 # Model Artifacts
 # ==========================================================
 
-*.pkl
-*.joblib
+
 *.h5
 *.onnx
 *.pt
@@ -100,7 +99,8 @@ ml/artifacts/cache/
 
 # Ignore generated plots if desired
 ml/artifacts/figures/
-
+ml/notebooks/catboost_info/
+catboost_info/
 # ==========================================================
 # Temporary Files
 # ==========================================================
